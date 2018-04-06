@@ -1,0 +1,10 @@
+{
+  "name": "game-starter",
+  "version": "0.0.0",
+  "description": "",
+  "author": "",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {}
+}
