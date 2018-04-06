@@ -23,6 +23,23 @@
 <body>
 	<script src="./phaser.min.js"></script>
 	<script>
+		function scaleCanvas() {
+			var canvas = document.querySelectorAll('canvas');
+
+			if (canvas.length) {
+				canvas = canvas[0];
+
+				var scaleWidth = window.innerWidth / canvas.offsetWidth;
+				var scaleHeight = window.innerHeight / canvas.offsetHeight;
+				var scale = (scaleWidth < scaleHeight) ? scaleWidth : scaleHeight;
+
+				canvas.style.transform = 'scale(' + scale + ')';
+			}
+		}
+
+		setTimeout(scaleCanvas, 1);
+		window.addEventListener('resize', scaleCanvas);
+
 		var config = {
 			type: Phaser.AUTO,
 			width: 800,
